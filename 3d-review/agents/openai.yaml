@@ -1,0 +1,4 @@
+interface:
+  display_name: "3d Review"
+  short_description: "Three-dimensional PR review workflow"
+  default_prompt: "Use $3d-review to comprehensively review this branch against origin/main."

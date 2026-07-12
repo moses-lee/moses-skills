@@ -1,0 +1,7 @@
+interface:
+  display_name: "Master Plan"
+  short_description: "Create an approved plan before changes"
+  default_prompt: "Use $master-plan to prepare an approved implementation plan."
+
+policy:
+  allow_implicit_invocation: false
