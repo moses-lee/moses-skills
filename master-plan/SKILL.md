@@ -7,6 +7,10 @@ description: Use only when the user explicitly invokes `$master-plan` to plan a 
 
 Create evidence-based, user-approved plan. Planning-only: inspect read-only; do not modify files, install dependencies, migrate, deploy, or implement.
 
+## Invocation input
+
+If an initial plan, scope, or description is supplied at invocation (e.g. `$master-plan <initial plan>`), treat it as the user's *proposed* starting point: an untrusted hypothesis, not an approved plan. Use it to seed and focus discovery (Step 1) and to prioritize what to grill (Step 2) — never to skip either. Verify its claims against current surfaces; where it conflicts with evidence or is silent, resolve by inspection or with the user. If no input is supplied, discover scope from the surfaces and the interview as usual.
+
 ## Non-negotiable rules
 
 - Do not make assumptions. Verify uncertainty from relevant surfaces or resolve it with the user.

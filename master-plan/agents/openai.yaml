@@ -1,7 +1,7 @@
 interface:
   display_name: "Master Plan"
   short_description: "Create an approved plan before changes"
-  default_prompt: "Use $master-plan to prepare an approved implementation plan."
+  default_prompt: "Use $master-plan to prepare an approved implementation plan. Optionally pass an initial plan or scope to seed discovery, e.g. $master-plan <initial plan>."
 
 policy:
   allow_implicit_invocation: false
