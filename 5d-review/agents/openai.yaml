@@ -1,0 +1,7 @@
+interface:
+  display_name: "5D Review"
+  short_description: "Architecture-first review by request"
+  default_prompt: "Use $5d-review to review the requested change."
+
+policy:
+  allow_implicit_invocation: false
