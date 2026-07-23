@@ -28,9 +28,9 @@ Split units that can fail, change, or revert independently. Account for every ch
 
 ## 3. Apply the solution gate
 
-Give the contract, change map, and sources to a fresh architecture reviewer. Judge necessity, proportionality, simpler alternatives, boundaries, ownership, dependencies, and operational cost from first principles.
+Give the contract, change map, and sources to a fresh architecture reviewer. Judge necessity, proportionality, boundaries, ownership, dependencies, and operational cost from first principles.
 
-If it rejects the solution, a fresh challenger must try to disprove it. Stop before implementation review only when the rejection survives: the design conflicts with the contract or adds material avoidable cost, and a credible alternative meets the requirements more simply. Report the decision and ask whether to continue despite it.
+If it rejects the solution, a fresh challenger must try to disprove it. Stop before implementation review only when the rejection survives: the design conflicts with the contract or adds material avoidable cost. Report the decision and ask whether to continue despite it.
 
 ## 4. Review craft and correctness
 
@@ -38,7 +38,7 @@ After the solution passes or the user overrides the gate, bundle related units a
 
 Apply the **change-friction test**: does the structure localize the next likely change, or make the code unnecessarily costly to understand, change, test, or operate? Report poor taste and sloppiness when that cost is concrete.
 
-Review correctness against the contract under plausible operating and adversarial conditions. Weigh likelihood and impact; recommend the smallest proportionate fix. Finish when every unit and focus has an evidence-backed disposition.
+Review correctness against the contract under plausible operating and adversarial conditions. Weigh likelihood and impact. Finish when every unit and focus has an evidence-backed disposition.
 
 ## 5. Validate findings
 
@@ -50,6 +50,6 @@ Report only findings that survive. Require causality to the change; for omission
 
 Report the contract and focus, change map, solution decision, craft assessment, findings ordered by impact and likelihood, verification, and residual risk.
 
-For each finding give behavior and impact, changed or missing location, evidence, and smallest justified fix. Separate change-caused from pre-existing behavior; history is context only.
+For each finding give behavior and impact, changed or missing location, evidence, and the governing constraint. Diagnose without prescribing; the PR author owns what to change. Separate change-caused from pre-existing behavior; history is context only.
 
 When the solution gate stops the review, end there and ask permission to continue.
