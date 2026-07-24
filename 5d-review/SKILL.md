@@ -1,7 +1,6 @@
 ---
 name: 5d-review
-description: Architecture-first review of a pull request, branch, or code diff.
-disable-model-invocation: true
+description: Use only when the user explicitly invokes `$5d-review` for an architecture-first review of a pull request, branch, or code diff.
 ---
 
 # 5D Review
