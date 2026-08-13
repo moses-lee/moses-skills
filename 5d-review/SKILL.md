@@ -41,6 +41,8 @@ Review correctness against the contract under plausible operating and adversaria
 
 ## 5. Validate findings
 
+Reviewer notes are candidates, not disposals. Before validation, promote any observation that recurs across agents, implicates a named consumer, or touches a contract surface.
+
 Give candidate batches to fresh non-author validators. They try to disprove causality, plausibility, and impact using requirements and primary code evidence, with focused reproduction when practical.
 
 Report only findings that survive. Require causality to the change; for omissions, cite the unmet requirement and absent behavior.
