@@ -2,8 +2,8 @@
 #
 # Symlink every skill in this repo into Claude Code and Codex.
 #
-# A "skill" is any top-level directory containing a SKILL.md. Existing links are
-# left untouched, so this is safe to run repeatedly (e.g. after `git pull`).
+# A "skill" is any top-level directory containing a SKILL.md. Correct links are
+# left untouched; links to removed skills in this repo are cleaned up.
 
 set -euo pipefail
 
@@ -12,6 +12,17 @@ TARGETS=("$HOME/.claude/skills" "$HOME/.codex/skills")
 
 for base in "${TARGETS[@]}"; do
   mkdir -p "$base"
+
+  for link in "$base"/*; do
+    [ -L "$link" ] || continue
+    src="$(readlink "$link")"
+
+    # Only remove links owned by this repo, preserving other installed skills.
+    if [ "$src" = "$REPO/$(basename "$link")" ] && [ ! -f "$src/SKILL.md" ]; then
+      rm "$link"
+      echo "removed obsolete link: $link"
+    fi
+  done
 done
 
 for dir in "$REPO"/*/; do
